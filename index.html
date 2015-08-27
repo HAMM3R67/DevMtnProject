@@ -6,10 +6,16 @@
 	<body ng-controller="recipeController">
 		<div>
 		{{34 + 33}}
+		
+		<form>
+			<input ng-model="searchRecipe" placeholder="Ingredient or Recipe"></input>
+			<button ng-click="getRecipeData()">Submit</button>
+		</form>
+		
 		</div>
 		
 		
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>	
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <script src="mainCtrl.js"></script>

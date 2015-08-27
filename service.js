@@ -7,9 +7,9 @@ app.service('recipeService', function($http){
 	
 	
 	this.getRecipe = function(ingredient){
-		var url = "http://food2fork.com/api/get"
+		var url = "http://food2fork.com/api/"
 		
 		return $http.get(url + param + ingredient)
 	}
 	
-})
+});
