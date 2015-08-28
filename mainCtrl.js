@@ -5,7 +5,7 @@ app.controller('recipeController', function($scope, recipeService){
 	$scope.getRecipeData = function(){
 		recipeService.getRecipe($scope.searchRecipe).the(function(result){
 			console.log(result)
-	
+			$scope.recipe = result
 		})
 	}
 	
