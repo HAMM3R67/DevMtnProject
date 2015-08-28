@@ -10,7 +10,7 @@ app.config(function($routeProvider){
 		templateUrl: 'pages/refrigerator/refrigerator.html',
 		controller: 'refrigeratorController'
 	})
-	.when('/recipe/:recipeId', {
+	.when('/recipes/:recipeId', {
 		templateUrl: 'pages/recipes/recipes.html',
 		controller: 'recipesController'
 	})
