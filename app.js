@@ -5,7 +5,8 @@ var app = angular.module('recipeApp', ['ngRoute']);
 app.config(function($routeProvider){
         $routeProvider.
             when('/', {
-                templateUrl: 'index.html'
+                templateUrl: 'index.html',
+                controller: 'mainCtrl'
             }).
             when('/recipes', {
                 templateUrl: 'recipes/recipe.html'
