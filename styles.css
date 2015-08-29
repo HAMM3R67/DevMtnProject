@@ -5,3 +5,11 @@
 #appName {
 	font-family: Papyrus;
 }
+
+.navBar {
+	display: inline;
+}
+
+.mainLogo {
+	text-align: center;
+}
