@@ -1,5 +1,5 @@
 var app = angular.module('refrigiChef');
 
-app.controller('homeController', function($scope){
+app.controller('homeController', function($scope, recipeService){
 	
 })
