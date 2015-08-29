@@ -6,10 +6,11 @@
 	font-family: Papyrus;
 }
 
-.navBar {
-	display: inline;
+.logIn {
+	text-align: center;
 }
 
 .mainLogo {
 	text-align: center;
+	
 }
