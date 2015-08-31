@@ -1,6 +1,6 @@
 var app = angular.module('refrigiChef');
 
-app.controller('refrigeratorController', function($scope){
+app.controller('refrigeratorController', function($scope, recipeService){
 	
 	$scope.getRecipe = function(){
 		//gets a list of recipes based off the ingredients that are input into the box
