@@ -8,5 +8,9 @@ app.service('recipeService', function($http, $q){
 		return $http.get('http://food2fork.com/api/search?key=' + key + '&q=' + ingredient)
 	}
 	
+	this.getRecipe = function(rId){
+		return $http.get('http://food2fork.com/api/get?key=' + key + '&q=' + rId)
+	}
+	
 	
 })

@@ -4,9 +4,9 @@ app.controller('recipesController', function($scope, recipeService){
 	
 	$scope.getRecipe = function(){
 		//gets a list of recipes based off the ingredients that are input into the box
-		recipeService.getRecipes($scope.ingredients).then(function(results){
+		recipeService.getRecipe($scope.recipe).then(function(results){
 			console.log(results.data)
-			$scope.recipes = results
+			$scope.recipe = results
 		})
 	}
 	
