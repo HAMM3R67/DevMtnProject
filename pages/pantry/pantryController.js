@@ -4,11 +4,11 @@ app.controller('pantryController', function($scope){
 	
 	var pantryItems = [];
 	
-	$scope.addPantryItem = function($scope.pantryItem){
-		
-		pantryItems.push($scope.pantryItem)
-		
-		console.log(pantryItems)
-	}
+	// $scope.addPantryItem = function($scope.pantryItem){
+	// 	
+	// 	pantryItems.push($scope.pantryItem)
+	// 	
+	// 	console.log(pantryItems)
+	// }
 	
 })
