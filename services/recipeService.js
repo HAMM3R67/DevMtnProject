@@ -12,5 +12,8 @@ app.service('recipeService', function($http, $q){
 		return $http.get('http://food2fork.com/api/get?key=' + key + '&q=' + rId)
 	}
 	
+	this.getPantryItems = function(){
+		return //pantry list as created by the user
+	}
 	
 })
