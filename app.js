@@ -1,5 +1,9 @@
 var app = angular.module('refrigiChef', ['ngRoute']);
 
+app.constant('fb', {
+	url: 'https://refrigi-chef.firebaseio.com/'
+})
+
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/', {
