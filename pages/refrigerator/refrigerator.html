@@ -24,10 +24,13 @@
 	<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
 </div>
 
-<div class="col-md-10 col-md-offset-2" ng-repeat="recipe in recipes">
-	<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
-	{{recipe.title}}
-	
+<div>
+	<span class="col-md-10 col-md-offset-2" ng-repeat="recipe in recipes">
+		<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
+		<br/>
+		{{recipe.title}}
+		
+	</span>
 </div>
 
 <!--<div class="col-md-1"></div>-->
