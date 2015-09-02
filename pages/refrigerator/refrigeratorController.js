@@ -9,7 +9,7 @@ app.controller('refrigeratorController', function($scope, recipeService, userSer
 		recipeService.getRecipes($scope.ingredient1, $scope.ingredient2, $scope.ingredient3, $scope.ingredient4, $scope.ingredient5).then(function(results){
 			console.log(results)
 			$scope.recipes = results.data.recipes
-			
+			//The below will reset the input boxes once the button has been clicked and data returned
 			$scope.ingredient1 = ""; 
 			$scope.ingredient2 = ""; 
 			$scope.ingredient3 = ""; 
