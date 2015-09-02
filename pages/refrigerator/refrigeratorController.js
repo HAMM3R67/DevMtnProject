@@ -7,8 +7,15 @@ app.controller('refrigeratorController', function($scope, recipeService, userSer
 	$scope.getRecipe = function(){
 		//gets a list of recipes based off the ingredients that are input into the box
 		recipeService.getRecipes($scope.ingredient1, $scope.ingredient2, $scope.ingredient3, $scope.ingredient4, $scope.ingredient5).then(function(results){
-			console.log(results.data.recipes)
+			console.log(results)
 			$scope.recipes = results.data.recipes
+			
+			$scope.ingredient1 = ""; 
+			$scope.ingredient2 = ""; 
+			$scope.ingredient3 = ""; 
+			$scope.ingredient4 = ""; 
+			$scope.ingredient5 = "";
+			
 		})
 	}
 })
