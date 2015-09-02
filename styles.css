@@ -1,3 +1,16 @@
+/*Index page/ items that should appear on every page*/
+body {
+	height: 1000px;
+	/*background: url('http://ec.l.thumbs.canstockphoto.com/canstock9313664.jpg') center center no-repeat;*/
+	/*background-repeat: no-repeat;*/
+}
+
+.mainLogo {
+	/*text-align: center;*/
+	background: url('http://ec.l.thumbs.canstockphoto.com/canstock9313664.jpg') center center no-repeat;
+	
+}
+
 .header {
 	text-align: center;
 }
@@ -6,15 +19,20 @@
 	font-family: Papyrus;
 }
 
+/*home page*/
 .logIn {
 	text-align: center;
 }
 
-.mainLogo {
-	text-align: center;
-	
-}
-
+/*Refrigerator Page*/
 .ingredientInput {
 	width: 500px;
+}
+
+.refrigeratorImages {
+	display: inline;
+	height: 200px;
+	width: 250px;
+	margin: 5px;
+		
 }
