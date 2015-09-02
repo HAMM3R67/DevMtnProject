@@ -32,8 +32,8 @@ body {
 }
 
 /*Refrigerator Page*/
-.ingredientInput {
-	width: 500px;
+.ingredientForm {
+	height: 100%;
 }
 
 .refrigeratorImages {
@@ -42,8 +42,4 @@ body {
 	width: 250px;
 	margin: 5px;
 		
-}
-
-.recipes > div:nth-child(5n+1){ 
-	clear: both; 
-}
+} 
