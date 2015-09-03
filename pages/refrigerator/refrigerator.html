@@ -25,12 +25,17 @@
 </span>
 
 <div>
-	<span class="col-md-4 col-md-push-2" ng-repeat="recipe in recipes">
-		<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
-		<br/>
-		{{recipe.title}}
-		
-	</span>
+	<form name="recipeList">
+		<span class="col-md-4 col-md-push-2" ng-repeat="recipe in recipes">
+			<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
+			<br/>
+		<label>	
+			{{recipe.title}}
+			<input type="checkbox" ng-model="selectedRecipe" ng-true-value="'YES'" ng-false-value="'NO'"/>
+		</label>
+		<button ng-click="saveRecipe()" type="button" class="btn btn-default btn-sm"	
+		</span>
+	</form>
 </div>
 
 <!--<div class="col-md-1"></div>-->
