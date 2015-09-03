@@ -18,4 +18,11 @@ app.controller('refrigeratorController', function($scope, recipeService, userSer
 			
 		})
 	}
+	
+	var currentUser = userService.getLoggedInUser();
+	
+	$scope.saveRecipe = function(){
+		
+	}
+	
 })
