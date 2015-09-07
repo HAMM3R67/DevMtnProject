@@ -14,6 +14,10 @@ app.controller('homeController', function($scope, $location, userService){
 		userService.createUser($scope.email, $scope.password)
 	}
 	
+	$scope.loginUser = function(){
+		userService.loginUser($scope.email, $scope.password)
+	}
+	
 	//below is email verification code, I am not sure exactly how it works...
 // 	$scope.authObj.$createUser({
 // 		email: "my@email.com",

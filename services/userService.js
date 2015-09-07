@@ -49,13 +49,13 @@ app.service('userService', function($firebaseAuth, fb, $location){
     }
 	
 	this.createUser = function(email, password){
-		$scope.authObj.$createUser({
+		authObj.$createUser({
 			email: email,
 			password: password
 	}).then(function(userData) {
 			console.log("User " + userData.uid + " created successfully!");
 	
-	return $scope.authObj.$authWithPassword({
+	return authObj.$authWithPassword({
 		email: email,
 		password: password
 	});
@@ -66,8 +66,8 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	});
 	}
 	
-	this.loginUser = function (){
-		return $scope.authObj.$authWithPassword({
+	this.loginUser = function (email, password){
+		return authObj.$authWithPassword({
 		email: email,
 		password: password
 	 });
