@@ -8,9 +8,9 @@
 		<li role="presentation"><a href="/#/">Logout</a></li>
 	</ul>
 </nav>
-<span class="ingredientForm" class="col-md-2">
+<div class="ingredientForm col-md-2" >
 	<div>Welcome {{user.name}}!</div>
-	<ul>
+	<ul class="">
 			<li><input ng-model="ingredient1" /></li>
 			<br/>
 			<li><input ng-model="ingredient2" /></li>
@@ -22,11 +22,11 @@
 			<li><input ng-model="ingredient5" /></li>
 	</ul>
 	<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
-</span>
+</div>
 
-<div>
+<div class="col-md-10">
 	<form name="recipeList">
-		<span class="col-md-4 col-md-push-2" ng-repeat="recipe in recipes">
+		<span class="col-md-4" ng-repeat="recipe in recipes">
 			<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
 			<br/>
 		<label>	

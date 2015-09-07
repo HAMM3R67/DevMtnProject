@@ -16,7 +16,7 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 			$scope.ingredient3 = ""; 
 			$scope.ingredient4 = ""; 
 			$scope.ingredient5 = "";
-			
+		
 		})
 	}
 	
@@ -24,20 +24,22 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	
 	
 	//I want to be able to select recipes that are returned from the API and save them to Firebase
-	$scope.selectedRecipe = {};
-	var savedRecipes = recipeService.saveRecipes(recipes);
-	
-	savedRecipes.$bindTo($scope, 'savedRecipes')// creates $scope.savedRecipes with a 3 way binding
-	
-	$scope.saveRecipe = function(){
-		if(!$scope.selectedRecipe){
-			return false; //Don't do anything if no recipes are selected
-		}
-	}
-	
-	var newRecipe = {
-		
-	}
+	// var recipeId = parseInt($routeParams.recipeId)
+	// 
+	// $scope.selectedRecipe = {};
+	// var savedRecipes = recipeService.saveRecipes(recipes);
+	// 
+	// savedRecipes.$bindTo($scope, 'savedRecipes')// creates $scope.savedRecipes with a 3 way binding
+	// 
+	// $scope.saveRecipe = function(){
+	// 	if(!$scope.selectedRecipe){
+	// 		return false; //Don't do anything if no recipes are selected
+	// 	}
+	// }
+	// 
+	// var newRecipe = {
+	// 	
+	// }
 	// $scope.saveRecipe = function(){
 	// 	recipeService.saveRecipes($scope.selectedRecipe).then(function(savedResults){
 	// 		console.log(savedResults.data)

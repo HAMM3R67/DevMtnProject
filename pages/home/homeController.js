@@ -10,6 +10,10 @@ app.controller('homeController', function($scope, $location, userService){
 		userService.loginWithFacebook();
 	}
 	
+	$scope.createUser = function(){
+		userService.createUser($scope.email, $scope.password)
+	}
+	
 	//below is email verification code, I am not sure exactly how it works...
 // 	$scope.authObj.$createUser({
 // 		email: "my@email.com",

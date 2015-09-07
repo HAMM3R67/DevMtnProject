@@ -2,10 +2,11 @@
 
 <div class="logIn">
 	<form>
-		<input placeholder="Email or Username"/>
-		<input placeholder="Password"/>
-		<button type="button" class="btn btn-default btn-sm" ng-click=""><a href="/#/refrigerator">Log In</a></button>
+		<input ng-model="email" placeholder="Email or Username"/>
+		<input ng-model="password" placeholder="Password"/>
+		<button type="button" class="btn btn-default btn-sm" ng-click="createUser()"><a href="/#/refrigerator">Log In</a></button>
 		<br/>
+		
 		<button ng-click="loginWithGoogle()" type="button" class="btn btn-default btn-sm">
 			Google Sign In
 		</button>
