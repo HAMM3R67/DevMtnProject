@@ -75,7 +75,7 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	
 	 this.logout = function(){
         authObj.$unauth()
-        $location.path('');
+        $location.path('/');
     }
 	
 	

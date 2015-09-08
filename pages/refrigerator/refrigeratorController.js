@@ -22,6 +22,12 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	
 	var currentUser = userService.getLoggedInUser();
 	
+	//logout
+	$scope.logout = function(){
+		userService.logout();
+	}
+	
+	
 	
 	//I want to be able to select recipes that are returned from the API and save them to Firebase
 	// var recipeId = parseInt($routeParams.recipeId)
