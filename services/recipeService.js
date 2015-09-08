@@ -6,16 +6,19 @@ app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject
 	
 	this.getRecipes = function(ingredient){
 		return $http.get('http://food2fork.com/api/search?key=' + key + '&q=' + ingredient)
+		
 	}
 	
-	// this.getRecipe = function(rId){
-	// 	return $http.get('http://food2fork.com/api/get?key=' + key + '&q=' + rId)
-	// }
+	this.getRecipe = function(rId){
+		return $http.get('http://food2fork.com/api/get?key=' + key + '&' + rId)
+			.success(function(data){
+				recipes.$add(data).then(function(){
+					console.log('recipe succesfully saved to firebase!!')
+			});
+		})
+	}
 	
-	// this.saveRecipes = function(recipes){
-	// 	var ref = new Firebase(fb.url + '/recipes' + recipes);
-	// 	return $firebaseObject(ref);
-	// }
+	//Save recipes to Firebase
 	
 	this.getPantryItems = function(){
 		return //pantry list as created by the user

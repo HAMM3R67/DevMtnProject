@@ -1,6 +1,6 @@
 var app = angular.module('refrigiChef');
 
-app.controller('refrigeratorController', function($scope, $location, $routeParams, recipeService, userService){
+app.controller('refrigeratorController', function($scope, $location, $routeParams, $firebaseObject, $http, recipeService, userService){
 	
 	$scope.user = userService.getLoggedInUser();
 	
@@ -27,6 +27,27 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 		userService.logout();
 	}
 	
+	$scope.saveRecipe = function(){
+		//$scope.selectedRecipe isn't what needs to be passed in getRecipes...the recipe id
+		//needs to pass in that function
+		recipeService.getRecipes($scope.selectedRecipe).then(function(savedResults){
+			console.log(savedResults.data.recipes.recipe_id)
+			$scope.savedRecipes = savedResults.data.recipes.recipe_id
+		})
+	  }
+	})
+	
+	//creating a new Firebase array
+// 	var ref = new Firebase('https://refrigi-chef.firebaseio.com/recipes');
+// ​
+//     var recipes = $firebaseArray(ref);
+// ​
+// 	$http('www.some-recipe-api.com/someRecipeId').success(function(data){
+// 		recipes.$add(data).then(function(){
+// 			console.log('recipe succesfully saved to firebase!!')
+// 		});
+// 	})
+	
 	
 	
 	//I want to be able to select recipes that are returned from the API and save them to Firebase
@@ -46,11 +67,4 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	// var newRecipe = {
 	// 	
 	// }
-	// $scope.saveRecipe = function(){
-	// 	recipeService.saveRecipes($scope.selectedRecipe).then(function(savedResults){
-	// 		console.log(savedResults.data)
-	// 		$scope.savedRecipes = savedResults.data.recipes
-	// 	})
-	// }
 	
-})
