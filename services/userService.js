@@ -16,6 +16,8 @@ app.service('userService', function($firebaseAuth, fb, $location){
 				user.name = info['google'].displayName
 			} else if(info.facebook){
 				user.name = info['facebook'].displayName
+			} else if(info.email){
+				user.name = info['email']
 			} else{
 				user.name = '';
 			}
