@@ -1,6 +1,6 @@
 var app = angular.module('refrigiChef');
 
-app.controller('refrigeratorController', function($scope, $location, $routeParams, $firebaseObject, $http, recipeService, userService){
+app.controller('refrigeratorController', function($scope, $location, $routeParams, $firebaseArray, $firebaseObject, $http, recipeService, userService){
 	
 	$scope.user = userService.getLoggedInUser();
 	
@@ -23,23 +23,34 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	$scope.logout = function(){
 		userService.logout();
 	}
+	//save Recipes to firebase under userID
+	var ref = new Firebase('https://refrigi-chef.firebaseio.com/recipes');
 	
-	$scope.saveRecipe = function(){
-		//$scope.selectedRecipe isn't what needs to be passed in getRecipes...the recipe id
-		//needs to pass in that function
-		recipeService.getRecipes($scope.selectedRecipe).then(function(savedResults){
-			console.log(savedResults.data.recipes.recipe_id)
-			$scope.savedRecipes = savedResults.data.recipes.recipe_id
+	var recipes = $firebaseArray(ref);
+	
+	$scope.saveRecipe = function (data){
+		recipes.$add(data).then(function(){
+			console.log('Recipe successfully saved to firebase!!!')
 		})
-	  }
-	})
+	}
+})
+	
+	// $scope.saveRecipe = function(){
+	// 	//$scope.selectedRecipe isn't what needs to be passed in getRecipes...the recipe id
+	// 	//needs to pass in that function
+	// 	recipeService.getRecipes($scope.selectedRecipe).then(function(savedResults){
+	// 		console.log(savedResults.data.recipes.recipe_id)
+	// 		$scope.savedRecipes = savedResults.data.recipes.recipe_id
+	// 	})
+	//   }
+	// })
 	
 	//creating a new Firebase array
 // 	var ref = new Firebase('https://refrigi-chef.firebaseio.com/recipes');
 // ​
 //     var recipes = $firebaseArray(ref);
 // ​
-// 	$http('www.some-recipe-api.com/someRecipeId').success(function(data){
+// 	(function(data){
 // 		recipes.$add(data).then(function(){
 // 			console.log('recipe succesfully saved to firebase!!')
 // 		});

@@ -21,10 +21,14 @@ app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject
 	//Save recipes to Firebase
 	
 	// Add items to the pantry, created by the user
-	pantryItems = [];
+		
+	var pantryItems = [];
 	
-	this.addPantryItems = function(pantryItem){
-		pantryItems.push(pantryItem)
+	var pantryItem = '';
+	
+	this.addPantryItem = function(pantryItem){
+			pantryItems.push(pantryItem)
+			console.log(pantryItems)
 	}
 	
 })

@@ -1,9 +1,10 @@
 /*Index page/ items that should appear on every page*/
 body {
-	height: 1000px;
-	background: url('http://ec.l.thumbs.canstockphoto.com/canstock9313664.jpg') center center no-repeat;
-	background-size: 500px;
-	/*background-repeat: no-repeat;*/
+	/*height: 1000px;*/
+	width: 1450px;
+	background-color: lightgray;
+	/*background-size: contain;*/
+	background-repeat: repeat;
 }
 
 .mainLogo img {
@@ -32,14 +33,19 @@ body {
 }
 
 /*Refrigerator Page*/
+.recipeBg {
+	border: 2px solid ghostwhite;	
+}
+
 .ingredientForm {
 	height: 100%;
 }
 
 .refrigeratorImages {
 	display: inline;
-	height: 200px;
-	width: 250px;
-	margin: 5px;
+	height: 270px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
 		
 } 
