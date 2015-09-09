@@ -8,29 +8,31 @@
 		<li role="presentation"><a ng-click="logout()" href="/#/">Logout</a></li>
 	</ul>
 </nav>
-<div class="ingredientForm col-md-2" >
-	<div>Welcome {{user.name}}!</div>
-	<ul class="">
-			<li><input ng-model="ingredient1" /></li>
-			<br/>
-			<li><input ng-model="ingredient2" /></li>
-			<br/>
-			<li><input ng-model="ingredient3" /></li>
-	</ul>
-	<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
-</div>
-
-<div class="col-md-10">
-	<form name="recipeList">
-		<span class="col-md-4 recipeBg" ng-repeat="recipe in recipes">
-			<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
-			<br/>
-		<label>	
-			{{recipe.title}}
-			<input type="checkbox" ng-click="saveRecipe()" ng-true-value="'YES'" ng-false-value="'NO'"/>
-		</label>	
-		</span>
-	</form>
+<div class="container">
+	<div class="ingredientForm col-md-8" >
+		<div>Welcome {{user.name}}!</div>
+		<ul class="">
+				<li><input class="ingredientInput" ng-model="ingredient1" /></li>
+				<br/>
+				<li><input class="ingredientInput" ng-model="ingredient2" /></li>
+				<br/>
+				<li><input class="ingredientInput" ng-model="ingredient3" /></li>
+		</ul>
+		<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
+	</div>
+	
+	<div class="col-md-8">
+		<form name="recipeList">
+			<span class="col-md-4 recipeBg" ng-repeat="recipe in recipes">
+				<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
+				<br/>
+			<label>	
+				{{recipe.title}}
+				<input type="checkbox" ng-click="saveRecipe()" ng-true-value="'YES'" ng-false-value="'NO'"/>
+			</label>	
+			</span>
+		</form>
+	</div>
 </div>
 
 <!--<div class="col-md-1"></div>-->
