@@ -1,12 +1,14 @@
 <nav class="navbar navbar-default">
-	<ul class="nav nav-pills">
-		<li role="presentation"><a href="/#/refrigerator">Refrigerator</a></li>
-		<li role="presentation"><a href="/#/pantry">Pantry</a></li>
-		<li role="presentation"><a href="/#/recipes/:recipeId">Recipes</a></li>
-		<li role="presentation"><a href="/#/shopList">Grocery List</a></li>
-		<li role="presentation"><a href="/#/mealPlan">Meal Plans</a></li>
-		<li role="presentation"><a ng-click="logout()" href="/#/">Logout</a></li>
+	<div class="container">
+	<ul class="nav nav-tabs">	
+		<li role="presentation" class="dropdown"><a href="/#/refrigerator">Refrigerator</a></li>
+		<li role="presentation" class="dropdown"><a href="/#/pantry">Pantry</a></li>
+		<li role="presentation" class="dropdown"><a href="/#/recipes/:recipeId">Recipes</a></li>
+		<li role="presentation" class="dropdown"><a href="/#/shopList">Grocery List</a></li>
+		<li role="presentation" class="dropdown"><a href="/#/mealPlan">Meal Plans</a></li>
+		<li role="presentation" class="dropdown"><a ng-click="logout()" href="/#/">Logout</a></li>
 	</ul>
+	</div>
 </nav>
 <div class="container">
 	<div class="ingredientForm col-md-8" >

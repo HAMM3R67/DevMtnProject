@@ -52,6 +52,10 @@ input {
 	background-color: #3b0a43
 }
 
+.barBg {
+	background-color: #3b0a43
+}
+
 .nav a {
 	color: #f3a542;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;

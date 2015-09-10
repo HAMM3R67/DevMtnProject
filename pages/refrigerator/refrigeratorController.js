@@ -21,6 +21,8 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 		userService.logout();
 	}
 	//save Recipes to firebase under userID
+	
+	
 	$scope.savedRecipes = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/USER_ID/userRecipes'))
 	
 	$scope.savedRecipes['NEW_RECIPE_ID'] = {/*whatever the recipe info is*/}
