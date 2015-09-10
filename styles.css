@@ -1,9 +1,8 @@
 /*Index page/ items that should appear on every page*/
 body {
 	/*height: 1000px;*/
-	width: 1450px;
-	background-color: white;
-	/*background-size: contain;*/
+	width: 1409px;
+	background-color: #635166;
 	background-repeat: repeat;
 }
 
@@ -25,11 +24,20 @@ body {
 
 .header {
 	text-align: center;
+	color: #F3A542;
 }
 
 #appName {
 	font-family: Papyrus;
 	font-weight: bold;
+}
+
+.bodyText {
+	color: #fed94a;
+}
+
+input {
+	color: black;
 }
 
 /*home page*/
@@ -38,9 +46,14 @@ body {
 }
 
 /*Refrigerator Page*/
-.navbar.navbar-default {
-	background-color: cadetblue
+.nav {
+	background-color: #3b0a43
 }
+
+.nav a {
+	color: #f3a542
+}
+
 .recipeBg {
 	border: 2px solid lightgray;	
 }
