@@ -26,17 +26,17 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	}
 	
 	//testing 3 way data binding with Firebase
-		var ref = new Firebase("https://refrigi-chef.firebaseio.com/data");
+		//var ref = new Firebase("https://refrigi-chef.firebaseio.com/data");
 		// download the data into a local object
-		$scope.data = $firebaseObject(ref);
+		//$scope.data = $firebaseObject(ref);
 		// putting a console.log here won't work, see below
 		
 		// download the data into a local object
-		var syncObject = $firebaseObject(ref);
+		//var syncObject = $firebaseObject(ref);
 	
 		 // synchronize the object with a three-way data binding
 		// click on `index.html` above to see it used in the DOM!
-		syncObject.$bindTo($scope, "data");
+		//	syncObject.$bindTo($scope, "data");
 	
 	
 	
