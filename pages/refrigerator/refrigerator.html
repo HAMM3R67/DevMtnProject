@@ -53,7 +53,7 @@
 <!--</div>  end navbar -->
 <!--<div class="container">-->
 	
-	<!--ui bootstrap <dropdown--></dropdown-->
+	<!--ui bootstrap <dropdown</dropdown
 	<div class="btn-group" dropdown keyboard-nav>
         <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary dropdownBtn" dropdown-toggle>
             Dropdown with keyboard navigation <span class="caret"></span>
@@ -77,14 +77,27 @@
             <li role="menuitem"><a href="/#/mealPlan">Meal Plans</a></li>
 			<li role="menuitem"><a href="/#/" ng-click="logout()">Logout</a></li>
         </ul>
-    </script><!-- end ui bootstrap dropdown -->
-
+    </script> end ui bootstrap dropdown -->
 	
-	<div class="ingredientForm col-md-8" >
-		<div>Welcome: {{user.name}}!</div>
-		
-				<input class="ingredientInput" ng-model="ingredient" />
-		<br/>
+	<div class="navbar navbar-default navbar-responsive-collapse">
+		<div class="container" role="navigation">
+			<ul class="nav nav-pills">
+				<li role="presentation"><a href="/#/refrigerator">Refrigerator</a></li>
+				<li role="presentation"><a href="/#/pantry">Pantry</a></li>
+				<li role="presentation"><a href="/#/recipes/:recipeId">Recipes</a></li>
+				<li role="presentation"><a href="/#/shopList">Grocery List</a></li>
+				<li role="presentation"><a href="/#/mealPlan">Meal Plans</a></li>
+				<li role="presentation"><a href="/#/" ng-click="logout">Logout</a></li>
+			</ul>
+		</div>
+</div>
+
+	<div>Welcome: {{user.name}}!</div> 
+	<div class="ingredientForm col-md-10">
+		<input class="ingredientInput" ng-model="ingredient" />
+	</div>
+	
+	<div class="col-md-10 getRecipe">
 		<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
 	</div>
 	

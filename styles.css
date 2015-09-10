@@ -1,7 +1,7 @@
 /*Index page/ items that should appear on every page*/
 body {
 	/*height: 1000px;*/
-	width: 1410px;
+	width: 1440px;
 	background-color: #635166;
 	background-repeat: repeat;
 }
@@ -59,8 +59,12 @@ input {
   /*navbar customization*/
 .navbar-custom {
     background-color:#3B0A43;
-    color:#f3a542;
+    color:#000;
     border-radius:0;
+}
+
+.container {
+	background-color:#3B0A43;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -76,12 +80,14 @@ input {
    /*End navbar customization*/
 
 .dropdownBtn {
-	color: #F3A542;
+	color: #000;
 }
 
 .nav a {
-	color: #f3a542;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #F3A542;
+	font-family: Papyrus;
+	font-size: 20px;
+	background-color: #3B0A43;
 }
 
 .recipeBg {
@@ -90,11 +96,13 @@ input {
 
 .ingredientForm {
 	height: 100%;
+	text-align: center;
 }
 
 .ingredientInput {
 	width: 500px;
 	text-align: center;
+	margin-bottom: 10px;
 }
 
 .refrigeratorImages {
@@ -105,3 +113,7 @@ input {
 	padding: 0px;
 		
 } 
+
+.getRecipe {
+	text-align: center;
+}
