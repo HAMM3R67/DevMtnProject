@@ -1,4 +1,4 @@
-<div class="navbar navbar-custom">
+<!--<div class="navbar navbar-custom">
 	<div class="container">
 		
 		<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
@@ -10,7 +10,7 @@
 		<a class="navbar-brand" href="/#/refrigerator"><img class="brandLogo" src="RefrigiChef-Logo.png" alt="Your Logo"></a>
 		
 		<div class="nav-collapse collapse navbar-responsive-collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav nav-pills">
 				<li class="active">
 					<a href="/#/refrigerator">Refrigerator</a>
 				</li>
@@ -22,10 +22,10 @@
 							<li><a href="/#/recipes/:recipeId">Recipes</a></li>
 							<li><a href="/#/shopList">Grocery List</a></li>
 							<li><a href="/#/mealPlan">Meal Plans</a></li>
-							<li class="divider"></li>
+							<li class="divider"></li>-->
 							
-					</ul> <!-- end dropdown-menu -->		
-				</li>
+					<!--</ul>  end dropdown-menu 		-->
+				<!--</li>
 			</ul>
 			
 			<ul class="nav navbar-nav pull-right">
@@ -45,24 +45,26 @@
 								
 						<li><a ng-click="logout()" href="/#/">Logout</a></li>
 					</ul>
-				</li>
+				</li>-->
 						
-			</ul> <!-- end nav -->
-		</div> <!-- end nav-collapse -->
-	</div> <!-- end container -->
-</div> <!-- end navbar -->
-<div class="container">
+			<!--</ul>  end nav -->
+		<!--</div>  end nav-collapse -->
+	<!--</div>  end container -->
+<!--</div>  end navbar -->
+<!--<div class="container">-->
 	
+	<!--ui bootstrap <dropdown--></dropdown-->
 	<div class="btn-group" dropdown keyboard-nav>
-        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdown-toggle>
+        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary dropdownBtn" dropdown-toggle>
             Dropdown with keyboard navigation <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+        <ul class="dropdown-menu dropdownBtn" role="menu" aria-labelledby="simple-btn-keyboard-nav">
             <li role="menuitem"><a href="/#/pantry">Pantry</a></li>
             <li role="menuitem"><a href="/#/recipes/:recipeId">Recipes</a></li>
             <li role="menuitem"><a href="/#/shopList">Grocery List</a></li>
             <li class="divider"></li>
             <li role="menuitem"><a href="/#/mealPlan">Meal Plans</a></li>
+			<li role="menuitem"><a href="/#/" ng-click="logout()">Logout</a></li>
         </ul>
     </div>
 
@@ -73,8 +75,9 @@
             <li role="menuitem"><a href="/#/shopList">Grocery List</a></li>
             <li class="divider"></li>
             <li role="menuitem"><a href="/#/mealPlan">Meal Plans</a></li>
+			<li role="menuitem"><a href="/#/" ng-click="logout()">Logout</a></li>
         </ul>
-    </script>
+    </script><!-- end ui bootstrap dropdown -->
 
 	
 	<div class="ingredientForm col-md-8" >
