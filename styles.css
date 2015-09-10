@@ -7,7 +7,7 @@ body {
 	background-repeat: repeat;
 }
 
-.Logo {
+.bigLogo {
 	text-align: center;
 	position: absolute;
 	top: 50%;
@@ -15,6 +15,12 @@ body {
 	height: 500px;
 	margin-top: -250px;
 	margin-left: -250px;
+	z-index: -1;
+}
+
+.smallLogo {
+	height: 75px;
+	widows: 75px;
 }
 
 .header {
