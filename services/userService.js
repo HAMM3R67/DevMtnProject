@@ -11,7 +11,6 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	
 	//Set the user object if already logged in on page refresh
 	var info = authObj.$getAuth();
-	console.log(info)
 		if(info){
 			if(info.google){
 				user.name = info['google'].displayName
