@@ -9,17 +9,50 @@
 		
 		<a class="navbar-brand" href="/#/refrigerator"><img class="brandLogo" src="RefrigiChef-Logo.png" alt="Your Logo"></a>
 		
-	<ul class="dropdown-menu">	
-		<li role="presentation" class="dropdown"><a href="/#/refrigerator">Refrigerator</a></li>
-		<li role="presentation" class="dropdown"><a href="/#/pantry">Pantry</a></li>
-		<li role="presentation" class="dropdown"><a href="/#/recipes/:recipeId">Recipes</a></li>
-		<li role="presentation" class="dropdown"><a href="/#/shopList">Grocery List</a></li>
-		<li role="presentation" class="dropdown"><a href="/#/mealPlan">Meal Plans</a></li>
-		<li role="presentation" class="dropdown"><a ng-click="logout()" href="/#/">Logout</a></li>
-	</ul>
+		<div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="/#/refrigerator">Refrigerator</a>
+				</li>
+				
+				<li class="dropdown">
+					<a href="/#/" class="dropdown-toggle" data-toggle="dropdown">Services<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">	
+							<li><a href="/#/pantry">Pantry</a></li>
+							<li><a href="/#/recipes/:recipeId">Recipes</a></li>
+							<li><a href="/#/shopList">Grocery List</a></li>
+							<li><a href="/#/mealPlan">Meal Plans</a></li>
+							<li class="divider"></li>
+							
+					</ul> <!-- end dropdown-menu -->		
+				</li>
+			</ul>
+			
+			<ul class="nav navbar-nav pull-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> My Account<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a>
+						</li>
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-refresh"></span> Update Profile</a>
+						</li>
+						<li>
+							<a href="#"><span class="glyphicon glyphicon-briefcase"></span> Billing</a>
+						</li>
+						<li class="divider"></li>
+								
+						<li><a ng-click="logout()" href="/#/">Logout</a></li>
+					</ul>
+				</li>
+						
+			</ul> <!-- end nav -->
+		</div> <!-- end nav-collapse -->
 	</div> <!-- end container -->
 </div> <!-- end navbar -->
 <div class="container">
+	
 	<div class="ingredientForm col-md-8" >
 		<div>Welcome: {{user.name}}!</div>
 		
