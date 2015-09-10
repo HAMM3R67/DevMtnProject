@@ -16,7 +16,6 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	}
 	
 	var currentUser = userService.getLoggedInUser();
-	console.log ($scope.user);
 	//logout
 	$scope.logout = function(){
 		userService.logout();
