@@ -16,15 +16,17 @@ app.controller('refrigeratorController', function($scope, $location, $routeParam
 	}
 	
 	var currentUser = userService.getLoggedInUser();
-	
+	console.log ($scope.user);
 	//logout
 	$scope.logout = function(){
 		userService.logout();
 	}
 	//save Recipes to firebase under userID
-	$scope.savedRecipes = $firebaseArray(new Firebase('https://refrigi-chef.firebaseio.com/userRecipes'))
+	$scope.savedRecipes = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/USER_ID/userRecipes'))
 	
-	$scope.savedRecipes.$add($scope.recipes)
+	$scope.savedRecipes['NEW_RECIPE_ID'] = {/*whatever the recipe info is*/}
+	
+	$scope.savedRecipes.$save()
 	
 	
 	

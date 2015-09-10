@@ -11,13 +11,14 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	
 	//Set the user object if already logged in on page refresh
 	var info = authObj.$getAuth();
+	console.log(info)
 		if(info){
 			if(info.google){
 				user.name = info['google'].displayName
 			} else if(info.facebook){
 				user.name = info['facebook'].displayName
-			} else if(info.email){
-				user.name = info['email']
+			} else if(info.password){
+				user.name = info['password'].email
 			} else{
 				user.name = '';
 			}
