@@ -21,14 +21,17 @@ app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject
 	//Save recipes to Firebase
 	
 	
-	// this.saveRecipe = function(userId){
-	// 	var savedRecipes = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/' + userId + '/userRecipes'))
-	// 	
-	// 	savedRecipes[userId] = {
-	// 		title: 
-	// 	}
-	// }
-	// Add items to the pantry, created by the user
+	this.saveRecipes = function(userId){
+		var savedRecipes = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/' + userId + '/userRecipes'))
+		
+		savedRecipes[userId] = {
+			title: title,
+			recipe_id: recipe_id
+		}
+		savedRecipes.$save()
+	}
+	
+	//Add items to the pantry, created by the user
 		
 	var pantryItems = [];
 	
