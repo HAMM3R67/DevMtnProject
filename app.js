@@ -1,4 +1,4 @@
-var app = angular.module('refrigiChef', ['ngRoute', 'firebase']);
+var app = angular.module('refrigiChef', ['ngRoute', 'firebase', 'ui.bootstrap']);
 
 app.constant('fb', {
 	url: 'https://refrigi-chef.firebaseio.com/'

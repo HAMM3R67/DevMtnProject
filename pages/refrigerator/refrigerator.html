@@ -53,6 +53,30 @@
 </div> <!-- end navbar -->
 <div class="container">
 	
+	<div class="btn-group" dropdown keyboard-nav>
+        <button id="simple-btn-keyboard-nav" type="button" class="btn btn-primary" dropdown-toggle>
+            Dropdown with keyboard navigation <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+            <li role="menuitem"><a href="/#/pantry">Pantry</a></li>
+            <li role="menuitem"><a href="/#/recipes/:recipeId">Recipes</a></li>
+            <li role="menuitem"><a href="/#/shopList">Grocery List</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="/#/mealPlan">Meal Plans</a></li>
+        </ul>
+    </div>
+
+    <script type="text/ng-template" id="dropdown.html">
+        <ul class="dropdown-menu" role="menu" aria-labelledby="simple-btn-keyboard-nav">
+          	<li role="menuitem"><a href="/#/pantry">Pantry</a></li>
+            <li role="menuitem"><a href="/#/recipes/:recipeId">Recipes</a></li>
+            <li role="menuitem"><a href="/#/shopList">Grocery List</a></li>
+            <li class="divider"></li>
+            <li role="menuitem"><a href="/#/mealPlan">Meal Plans</a></li>
+        </ul>
+    </script>
+
+	
 	<div class="ingredientForm col-md-8" >
 		<div>Welcome: {{user.name}}!</div>
 		
