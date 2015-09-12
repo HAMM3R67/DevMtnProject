@@ -19,6 +19,12 @@ This is the recipes page.
 selectable, with a Save Recipes button, which will save the recipes to Firebase and then
 whenever the recipes page loads, whatever recipes were saved will appear.-->
 
-
+<div>
+	<span class="col-md-4 recipeBg" ng-repeat="recipe in savedRecipes">
+		<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
+		<br/>
+		{{recipe.title}}
+	</span>
+</div>
 
 

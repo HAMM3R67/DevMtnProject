@@ -1,8 +1,15 @@
 var app = angular.module('refrigiChef');
 
-app.controller('mealPlanController', function($scope, userService){
+app.controller('mealPlanController', function($scope, mealPlanService, userService, recipeService){
 	
-	$scope.today = function() {
+  $scope.savedRecipes = recipeService.getSavedRecipes();
+	console.log($scope.savedRecipes)
+  
+	/*
+    Datepicker
+  */
+  
+  $scope.today = function() {
     $scope.dt = new Date();
   };
   $scope.today();
