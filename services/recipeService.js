@@ -34,6 +34,14 @@ app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject
 		
 	}
 	
+	//get the recipes that are saved by the user
+	
+	this.getSavedRecipes = function(){
+		var userId = userService.getLoggedInUser().uid;
+		
+		return $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/' + userId + '/userRecipes'))
+	}
+	
 	//Add items to the pantry, created by the user
 		
 	var pantryItems = [];

@@ -38,6 +38,9 @@ app.controller('refrigeratorController', function($scope, $log, $location, $rout
 		})
 	}
 	
+	$scope.savedRecipes = recipeService.getSavedRecipes();
+	console.log($scope.savedRecipes)
+	
 	
 	
 	var currentUser = userService.getLoggedInUser();

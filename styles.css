@@ -56,6 +56,10 @@ input {
 
 /*Refrigerator Page*/
 
+
+.buttonFont {
+	color: black;
+}
   /*navbar customization*/
 .navbar-custom {
     background-color:#3B0A43;

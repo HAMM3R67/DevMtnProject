@@ -108,7 +108,8 @@
 				<br/>
 			<label>	
 				{{recipe.title}}
-				<input type="checkbox" ng-click="toggleRecipe(recipe)" ng-true-value="'YES'" ng-false-value="'NO'"/>
+				<!--<input type="checkbox" ng-click="toggleRecipe(recipe)" ng-true-value="'YES'" ng-false-value="'NO'"/>-->
+				<button ng-click="toggleRecipe(recipe)" class="buttonFont" ng-hide="savedRecipes[recipe.recipe_id]">Save Recipe</button>
 			</label>	
 			</span>
 		</form>
