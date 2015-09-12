@@ -11,20 +11,20 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	
 	//Set the user object if already logged in on page refresh
 	var info = authObj.$getAuth();
-		if(info){
-			if(info.google){
-				user.name = info['google'].displayName
-			} else if(info.facebook){
-				user.name = info['facebook'].displayName
-			} else if(info.password){
-				user.name = info['password'].email
-			} else{
-				user.name = '';
-			}
+	if(info){
+		if(info.google){
+			info.name = info['google'].displayName
+		} else if(info.facebook){
+			info.name = info['facebook'].displayName
+		} else if(info.password){
+			info.name = info['password'].email
+		} else{
+			info.name = '';
 		}
+	}
 		
 	this.getLoggedInUser = function(){
-		return user;
+		return info;
 	}	
 	
 	// this.getUserId = function (){

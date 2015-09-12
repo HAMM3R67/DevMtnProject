@@ -1,6 +1,6 @@
 var app = angular.module('refrigiChef');
 
-app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject, fb){
+app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject, userService, fb){
 	
 	var key = 'd4c39b34edfa725f0882fc2008161d90'
 	
@@ -21,14 +21,17 @@ app.service('recipeService', function($http, $q, $firebaseArray, $firebaseObject
 	//Save recipes to Firebase
 	
 	
-	this.saveRecipes = function(userId){
-		var savedRecipes = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/' + userId + '/userRecipes'))
+	this.saveRecipe = function(recipeData){
+		var userId = userService.getLoggedInUser().uid;
+	
+		var userRecipeDatabase = $firebaseObject(new Firebase('https://refrigi-chef.firebaseio.com/' + userId + '/userRecipes'))
+		userRecipeDatabase.$loaded().then(function(){
+			
+			userRecipeDatabase[recipeData.recipe_id] = recipeData;
+			
+			userRecipeDatabase.$save()	
+		})
 		
-		savedRecipes[userId] = {
-			title: title,
-			recipe_id: recipe_id
-		}
-		savedRecipes.$save()
 	}
 	
 	//Add items to the pantry, created by the user
