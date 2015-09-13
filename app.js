@@ -4,6 +4,12 @@ app.constant('fb', {
 	url: 'https://refrigi-chef.firebaseio.com/'
 })
 
+app.run(function($rootScope, userService){
+	$rootScope.getUserId = function(){
+		return userService.getUserId();
+	}
+})
+
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/', {

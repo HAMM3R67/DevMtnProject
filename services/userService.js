@@ -9,17 +9,25 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	var ref = new Firebase(fb.url);
 	var authObj = $firebaseAuth(ref);
 	
-	//Set the user object if already logged in on page refresh
-	var info = authObj.$getAuth();
-	if(info){
-		if(info.google){
-			info.name = info['google'].displayName
-		} else if(info.facebook){
-			info.name = info['facebook'].displayName
-		} else if(info.password){
-			info.name = info['password'].email
-		} else{
-			info.name = '';
+	setAuthInfo();
+	authObj.$onAuth(function(){
+		setAuthInfo();
+	})
+	
+	var info;
+	function setAuthInfo(){
+		//Set the user object if already logged in on page refresh
+		info = authObj.$getAuth();
+		if(info){
+			if(info.google){
+				info.name = info['google'].displayName
+			} else if(info.facebook){
+				info.name = info['facebook'].displayName
+			} else if(info.password){
+				info.name = info['password'].email
+			} else{
+				info.name = '';
+			}
 		}
 	}
 		
@@ -27,14 +35,16 @@ app.service('userService', function($firebaseAuth, fb, $location){
 		return info;
 	}	
 	
-	// this.getUserId = function (){
-	// 	return user.uid
-	// }
+	this.getUserId = function (){
+		if(!info){
+			return
+		}
+		return info.uid
+	}
 	
 	this.loginWithGoogle = function(){
 		
 		authObj.$authWithOAuthPopup('google').then(function(authData){
-			user.name = authData.google.displayName;
             $location.path('refrigerator')                        
             console.log("Logged in as:", authData.uid);
          }).catch(function(error) {
@@ -45,7 +55,6 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	this.loginWithFacebook = function(){
         
         authObj.$authWithOAuthPopup("facebook").then(function(authData) {
-            user.name = authData.facebook.displayName;
             $location.path('refrigerator')                        
             console.log("Logged in as:", authData.uid);
          }).catch(function(error) {
@@ -80,7 +89,7 @@ app.service('userService', function($firebaseAuth, fb, $location){
 	}
 	
 	 this.logout = function(){
-        authObj.$unauth()
+        authObj.$unauth();
         $location.path('/');
     }
 	
