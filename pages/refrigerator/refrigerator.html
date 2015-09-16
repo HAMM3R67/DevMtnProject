@@ -101,7 +101,9 @@
 		<button ng-click="getRecipe()" type="button" class="btn btn-default btn-sm">Get Recipes</button>
 	</div>
 	
-	<div class="col-md-9">
+	<div class="row">
+	<!--<div class="col-md-2">Push it over</div>-->
+	<div class="col-md-7 col-md-offset-2">
 		<form name="recipeList">
 			<span class="col-md-4 recipeBg" ng-repeat="recipe in recipes">
 				<a ng-href="{{recipe.source_url}}"><img class="refrigeratorImages" ng-src="{{recipe.image_url}}"></img></a>
@@ -115,10 +117,11 @@
 			</span>
 		</form>
 	</div>
-	
+	<!--<div class="col-md-2">Push it over</div>-->
+	</div>
 	<!--<input type="text" ng-model="data.text"/>
 	
 	<h1>You said: {{ data.text }}</h1>-->
-</div>
+<!--</div>-->
 
 <!--<div class="col-md-1"></div>-->
