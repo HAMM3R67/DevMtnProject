@@ -1,0 +1,9 @@
+{
+  "firebase": "refrigi-chef",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

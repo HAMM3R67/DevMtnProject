@@ -25,13 +25,24 @@
 			 
 			 
 			 <div class="bodyText" ng-show='getUserId()'>
-				I AM IN THE INDEX. HIDE ME IF I AM NOT LOGGED IN	 
+				<div class="navbar navbar-default navbar-responsive-collapse">
+		<div class="container" role="navigation">
+			<ul class="nav nav-pills">
+				<li role="presentation"><a href="/#/refrigerator">Refrigerator</a></li>
+				<li role="presentation"><a href="/#/pantry">Pantry</a></li>
+				<li role="presentation"><a href="/#/recipes/:recipeId">Recipes</a></li>
+				<li role="presentation"><a href="/#/shopList">Grocery List</a></li>
+				<li role="presentation"><a href="/#/mealPlan">Meal Plans</a></li>
+				<li role="presentation"><a href="/#/" ng-click="logout()">Logout</a></li>
+			</ul>
+		</div>
+</div>	 
 			 </div>
 			<div ng-view>
 				
 			</div>
 		</div>
-		
+		 
 		
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
