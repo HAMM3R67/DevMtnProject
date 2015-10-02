@@ -31,7 +31,7 @@
 <div>
     <pre class="dateColor">Selected date is: <em>{{dateObject | date:'fullDate' }}</em></pre>
     <div ng-show="savedRecipes[meals[dateString]]">
-      <a ng-href="{{savedRecipes[meals[dateString]].source_url}}"><img class="refrigeratorImages" ng-src="{{savedRecipes[meals[dateString]].image_url}}"></img></a>
+      <a ng-href="{{savedRecipes[meals[dateString]].source_url}}"><img class="mealPlanImages" ng-src="{{savedRecipes[meals[dateString]].image_url}}"></img></a>
 		<br/>
 		{{savedRecipes[meals[dateString]].title}}
     </div>
